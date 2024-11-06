@@ -1,10 +1,22 @@
 package test;
 
+import java.util.Scanner;
+
 public class comments {
     public static void main(String[] args) {
-        int a = 1;
-
-String b = "" + a;
-    int c = Integer.parseInt(b);
-System.out.println(c);
-    }}
+        System.out.println("Введите числа (ТОЛЬКО)");
+        Scanner sc1 = new Scanner(System.in);
+        int a;
+int counter = 1;
+        while (counter == 1) {
+            if (sc1.hasNextInt()) {
+                a = sc1.nextInt();
+                counter++;
+                System.out.println("Введенное число: " + a);
+            } else{
+                String b = sc1.nextLine();
+                System.out.println("Введенное значение: " + b);
+            }
+        }
+    }
+}
