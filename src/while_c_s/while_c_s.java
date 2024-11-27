@@ -7,7 +7,15 @@ import java.util.Scanner;
 
 public class while_c_s {
     public static void main(String[] arg) {
+        int i = 1;
+        while (i <= 20) {
+            i++;
+            if ((i % 7) == 0) continue;
+            System.out.println(i);
 
+        }
+    }
+}
         //напишите тут ваш код
      /*   int stringCount = 0;
 
@@ -44,11 +52,12 @@ public class while_c_s {
         //вар_1 решение
 
      */
-        int i = 100;
+    /*    int i = 100;
         while (i > 1){
             System.out.println(i);
             i-=10;
         }
+*/
 
 // вар_2 решение
      /*   int i = 100;
@@ -60,8 +69,9 @@ public class while_c_s {
         }
 */
 
-    }
-}
+
+
+
 
 
 
