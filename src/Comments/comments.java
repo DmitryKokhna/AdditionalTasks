@@ -1,6 +1,4 @@
-package test;
-
-import java.util.Scanner;
+package Comments;
 
 public class comments {
     public static void main(String[] args) {
