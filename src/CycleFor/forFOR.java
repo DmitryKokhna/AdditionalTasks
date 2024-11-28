@@ -13,7 +13,7 @@ public class forFOR {
             System.out.println(i);
         }
      */
-
+/*
         //ЗАДАЧА2
         //Необходимо вывести на экран таблицу умножения на 3 (НО переделаем на универсальную)
         int multiplicand;
@@ -36,6 +36,23 @@ public class forFOR {
         } else {
             System.out.println("Введено значение для МНОЖИМОЕ не является целым числом или явлеется строкой. Повторите.");
         }
+*/
+        //ЗАДАЧА3
+        // Напишите программу, где пользователь вводит любое целое положительное число.
+        // А программа суммирует все числа от 1 до введенного пользователем числа.
+        Scanner scanner = new Scanner(System.in);
+        int end = 0;
+        int sum = 0;
+        if (scanner.hasNextInt()) {
+            end = scanner.nextInt();
+        }
+        if (end > 0) {
+            for (int i = 0; i < end; i++) {
+                sum = sum + i;
+            }
+
+        }
+        System.out.println(sum);
     }
 }
 
