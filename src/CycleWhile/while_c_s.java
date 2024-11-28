@@ -88,7 +88,7 @@ public class while_c_s {
         System.out.println();
 
         while (monthEntered > 0) {
-            sum = sum + (sum * 7 / 100);
+            sum = sum + (sum * interestRate / 100);
             monthEntered--;
             System.out.println(Math.round(sum*100)/ 100.0);
             if (monthEntered == 0) {
