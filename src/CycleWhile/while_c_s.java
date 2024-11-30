@@ -1,7 +1,11 @@
 package CycleWhile;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class while_c_s {
-    public static void main(String[] arg) {
+    public static void main(String[] arg) throws IOException {
 /*
     //ЗАДАЧА1 - вывести числа кратные 7
         int i = 1;
@@ -15,7 +19,7 @@ public class while_c_s {
 }
 */
 
-
+/*
         // ЗАДАЧА2 - Выводи фигуру
         int stringCount = 0;
         while (stringCount < 10) {
@@ -32,6 +36,9 @@ public class while_c_s {
             }
             System.out.println();
             stringCount++;
+        }
+
+ */
 
 /*
       //Задача 3:
@@ -65,7 +72,7 @@ public class while_c_s {
         }
 */
 
-/*
+
      // ЗАДАЧА 5 -   За каждый месяц банк начисляет к сумме вклада 7% от суммы.
      // Напишите консольную программу, в которую пользователь вводит сумму вклада и количество месяцев.
      // А банк вычисляет конечную сумму вклада с учетом начисления процентов за каждый месяц.
@@ -75,6 +82,7 @@ public class while_c_s {
         double sum;
         int monthEntered;
         double resultSum = 0;
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.print("Ввведите сумму вклада: ");
@@ -96,10 +104,12 @@ public class while_c_s {
             }
         }
         System.out.println(resultSum);
- */
+
+
         }
-    }
-}
+        }
+
+
 
 
 
