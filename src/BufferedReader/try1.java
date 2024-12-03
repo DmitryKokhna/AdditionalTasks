@@ -12,6 +12,7 @@ public class try1 {
         System.out.println("Строка: " + str1 );
 */
         //  BufferedReader bufferedReader1 =  new BufferedReader(new FileReader("C:\\Users\\Dima\\1.txt"));
+        /*
         BufferedReader bufferedReader2 = new BufferedReader((new InputStreamReader(System.in)));
         String str1 = bufferedReader2.readLine();
         double a = Double.parseDouble(str1);
@@ -23,6 +24,7 @@ public class try1 {
         if ((Math.abs(a - b)) > 0.001) {
             System.out.println("Числа не равны");
         }
+*/
 
     }
 }
