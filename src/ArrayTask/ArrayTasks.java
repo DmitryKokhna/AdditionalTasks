@@ -75,6 +75,8 @@ for (int i=0;i<array.length;i++)
             System.out.println("Массив 2 больше");
         }
 */
+
+        /*
         //ЗАДАЧА3_ Создать второй массив из четных элементов первого массива
 //        Условие задачи:
 //        1. Пользователь должен ввести с клавиатуры размер массива - натуральное число больше 3. Введенное пользователем число сохраняется в переменную n.
@@ -133,6 +135,41 @@ for (int i=0;i<array.length;i++)
         for (int i = 0; i < indexArrayEven; i++) {
             System.out.print(arrayEven[i] + ", ");
         }
+        */
+
+        // ЗАДАЧА_2 Одномерный массив типа String.
+        //Создать массив типа String с размером 7.
+        //Записать в него значения дней недели.
+        //Вывести на консоль значение последнего элемента.
+
+        Scanner scanner = new Scanner(System.in);
+        String[] array = new String[7];
+        for (int i = 0; i < 7; i++) {
+            if (i==0){
+                array[i]="Пн";
+            } else if (i==1) {
+                array[i]="Вт";
+            } else if (i==2) {
+                array[i]="Ср";
+            } else if (i==3){
+                array[i]="Чт";
+            } else if (i==4) {
+                array[i]="Пт";
+            } else if (i==5) {
+                array[i]="Сб";
+            }   else {
+                array[i]="Вс";
+            }
+        }
+        // Вывод всех
+        for (int i = 0; i < 7; i++) {
+            System.out.println(array[i]);
+
+        }
+        int lastIndex= array.length-1;
+// ВЫвод одного последнего
+        System.out.println("Последний элемент:");
+        System.out.println(array[lastIndex]);
     }
 }
 
