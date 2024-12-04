@@ -1,5 +1,7 @@
 package ArrayTask;
 
+import java.util.Scanner;
+
 public class ArrayTasks {
     public static void main(String[] args) {
        /*
@@ -73,7 +75,75 @@ for (int i=0;i<array.length;i++)
             System.out.println("Массив 2 больше");
         }
 */
+        //ЗАДАЧА3_ Создать второй массив из четных элементов первого массива
+//        Условие задачи:
+//        1. Пользователь должен ввести с клавиатуры размер массива - натуральное число больше 3. Введенное пользователем число сохраняется в переменную n.
+//        2. Если пользователь ввёл не подходящее число, то программа должна просить пользователя повторить ввод.
+//        3. Создать массив из n случайных целых чисел из отрезка [0;n] и вывести его на экран.
+//        4. Создать второй массив только из чётных элементов первого массива, если они там есть, и вывести его на экран
+        System.out.println("Введите размер массива. Размер должен быть больше 3 (три)");
+        int n = 0;
 
-
+        Scanner scanner = new Scanner(System.in);
+        while (n <= 3) {
+            if (scanner.hasNextInt()) {
+                n = scanner.nextInt();
+                if (n <= 3) {
+                    System.out.println("Введено неверный размер массива. Вы ввели размер равный: " + n);
+                }
+            } else {
+                System.out.println("Введено не число");
+                scanner.next();
+            }
+        }
+        int[] array = new int[n];
+        int countEven = 0; //счетчик для опредедения количествао четных элементов в массиве
+        //заполняем массив
+        for (int i = 0; i < n; i++) {
+            array[i] = (int) (Math.random() * (n + 1));
+        }
+        System.out.println("Массив из случайных чисел состоящий из " + n + " чисел");
+        //выводим исходных массив
+        for (int i = 0; i < n; i++) {
+            System.out.print(array[i] + ", ");
+        }
+        //тут проверяем этементы исходного массива на четность и не 0, и определяем размер массива  из четных значений
+        for (int i = 0; i < n; i++) {
+            if (array[i] % 2 == 0 && array[i] != 0) {
+                countEven++;
+            }
+        }
+        int[] arrayEven = new int[countEven];
+        if (countEven > 0) {
+            System.out.println();
+            System.out.println("Массив счетными числами создан");
+            System.out.println("Элементов в массиве: " + countEven);
+        } else {
+            System.out.println("Массив счетными числами НЕ создан");
+        }
+        // тут формируем массив из четных значений исходного массива
+        int indexArrayEven = 0;
+        for (int i = 0; i < n; i++) {
+            if (array[i] % 2 == 0 && array[i] != 0) {
+                arrayEven[indexArrayEven] = array[i];
+                indexArrayEven++;
+            }
+        }
+        System.out.println("ЧЕТНЫЙ массив");
+        for (int i = 0; i < indexArrayEven; i++) {
+            System.out.print(arrayEven[i] + ", ");
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

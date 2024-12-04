@@ -25,6 +25,12 @@ public class try1 {
             System.out.println("Числа не равны");
         }
 */
-
+        int a = 1;
+        int b = 2;
+        int c = 0;
+        if (a < b) {
+            c = 3;
+        }
+        System.out.println(c);
     }
 }
