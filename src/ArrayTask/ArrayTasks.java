@@ -1,6 +1,7 @@
 package ArrayTask;
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ArrayTasks {
     public static void main(String[] args) {
@@ -253,31 +254,49 @@ public class ArrayTasks {
 //        Создайте массив из 4 случайных целых чисел из отрезка [10;99],
 //        выведите его на экран в строку. Определить и вывести на экран сообщение о том,
 //        является ли массив строго возрастающей последовательностью.
-
+/*
         int[] array = new int[4];
-       // массив для проверки + Math. random закомментить.
-      //  int[] array = {2,2,3,4};
+        // массив для проверки + Math. random закомментить.
+        //  int[] array = {2,2,3,4};
         for (int i = 0; i < array.length; i++) {
-           array[i] = (int) (Math.random() * 90);
+            array[i] = (int) (Math.random() * 90);
             System.out.print(array[i] + " ");
         }
-        int count=0;
+        int count = 0;
         for (int i = 0; i < array.length - 1; i++) {
-            if ((array[i] > array[i + 1]) || (array[i] == array[i + 1])){
+            if ((array[i] > array[i + 1]) || (array[i] == array[i + 1])) {
                 count++;
             }
-
-            }
-        if(count==0){
+        }
+        if (count == 0) {
             System.out.println("возрастающи");
         } else {
             System.out.println("не возраст");
         }
 
-        }
+ */
 
+// ЗАДАЧА_7
+// Создайте массив из 12 случайных целых чисел из отрезка [-15;15].
+// Определите какой элемент является в этом массиве максимальным и сообщите индекс его последнего вхождения в массив.
+        int[] array12 = new int[12];
+        int max = array12[0];
+        int index = 0;
+        for (int i = 0; i < array12.length; i++) {
+            array12[i] = ThreadLocalRandom.current().nextInt(-15, 15);
+            System.out.print("Индекс:" + i + " + Значение:" + array12[i] + "| ");
+        }
+        for (int i = 1; i < array12.length; i++) {
+            if (array12[i] > max) {
+                max = array12[i];
+                index = i;
+            }
+        }
+        System.out.println();
+        System.out.println("Индекс, где расположено наибоьше число: " + index);
 
     }
+}
 
 
 
