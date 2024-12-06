@@ -237,17 +237,17 @@ public class ArrayTasks {
         // и выведете это количество на экран на отдельной строке.
 
         int[] array = new int[15];
-        int enevCounter = 0;
+        int evenCounter = 0;
 //заполняем массив
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 10);
             System.out.print(array[i] + " ");
             if (i > 0 && i % 2 == 0) {
-                enevCounter++;
+                evenCounter++;
             }
         }
         System.out.println();
-        System.out.println("Enentcounter: " + enevCounter);
+        System.out.println("EventCounter: " + evenCounter);
 */
     }
 }
