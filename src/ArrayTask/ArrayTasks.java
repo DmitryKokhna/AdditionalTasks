@@ -275,10 +275,11 @@ public class ArrayTasks {
         }
 
  */
+
 /*
-// ЗАДАЧА_7
-// Создайте массив из 12 случайных целых чисел из отрезка [-15;15].
-// Определите какой элемент является в этом массиве максимальным и сообщите индекс его последнего вхождения в массив.
+          // ЗАДАЧА_7
+          // Создайте массив из 12 случайных целых чисел из отрезка [-15;15].
+          // Определите какой элемент является в этом массиве максимальным и сообщите индекс его последнего вхождения в массив.
         int[] array12 = new int[12];
         int max = array12[0];
         int index = 0;
@@ -295,8 +296,42 @@ public class ArrayTasks {
         System.out.println();
         System.out.println("Индекс, где расположено наибоьше число: " + index);
 */
+
+        //ЗАДАЧА_8
+        // Создайте массив из 11 случайных целых чисел из отрезка [-1;1],
+        // выведите массив на экран в строку. Определите какой элемент встречается в массиве чаще всего
+        // и выведите об этом сообщение на экран. Если два каких-то элемента встречаются одинаковое количество раз, то не выводите ничего.
+
+        int[] array11 = new int[11];
+        int countForOne = 0;
+        int countForZero = 0;
+        int contForOneMinus = 0;
+
+        System.out.println("Массив: ");
+        for (int i = 0; i < array11.length; i++) {
+            array11[i] = ThreadLocalRandom.current().nextInt(-1, 1);
+
+            System.out.print(array11[i] + " | ");
+            if (array11[i] == 0) {
+                countForZero++;
+            } else if (array11[i] == 1) {
+                countForOne++;
+            } else if (array11[i] == -1) {
+                contForOneMinus++;
+            }
+        }
+        System.out.println("\n");
+        if ((countForZero > countForOne) && (countForZero > contForOneMinus)) {
+            System.out.println("Итог:" + "\n" + "'0' представлен больше раз в массиве, так он появляется " + countForZero + " раз" + "," + "\n" + "'1' " + countForOne + " раз, " + "'-1' " + contForOneMinus + " раз.");
+
+        } else if (countForOne > contForOneMinus && countForOne > countForZero) {
+            System.out.println("Итог:" + "\n" + "'1' представлен больше раз в массиве, так он появляется " + countForOne + " раз" + "," + "\n" + "'1' " + countForZero + " раз, " + "'-1' " + contForOneMinus + " раз.");
+        } else if (contForOneMinus > countForOne && contForOneMinus > countForZero) {
+            System.out.println("Итог:" + "\n" + "'-1' представлен больше раз массиве, так он появляется " + contForOneMinus + " раз" + "," + "\n" + "'1' " + countForOne + " раз, " + "'0' " + countForZero + " раз.");
+        }
     }
 }
+
 
 
 
