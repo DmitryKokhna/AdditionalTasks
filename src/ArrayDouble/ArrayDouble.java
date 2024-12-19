@@ -44,7 +44,28 @@ public class ArrayDouble {
             System.out.println();
         }
 
-
+        //ЗАДАЧА_3_1
+        //Двумерный массив типа char.
+        //Создать двумерный массив типа char размером 4х2.
+        //Записать в него значения с помощью блока для инициализации.
+        //Распечатать значения массива.
+char[][] arrayChar = new char[4][2];
+        for (int i = 0; i < arrayChar.length; i++) {
+            for (int j = 0; j < arrayChar[i].length; j++) {
+               arrayChar[i][j] = 'a';
+                System.out.print( arrayChar[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        char[][] arrayChar2 = new char[][] {{'a','b'},{'c','d'},{'e','f'},{'g','h'}};
+        for (int i = 0; i < arrayChar2.length; i++) {
+            for (int j = 0; j < arrayChar2[i].length; j++) {
+                arrayChar[i][j] = 'a';
+                System.out.print( arrayChar2[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
 }
