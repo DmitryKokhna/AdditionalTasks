@@ -1,6 +1,8 @@
 package ArrayDouble;
 
 import java.util.Arrays;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ArrayDouble {
 
@@ -20,7 +22,7 @@ public class ArrayDouble {
             int a = MULTIPLICATION_TABLE[0].length;
         }
 */
-
+/*
         // ЗАДАЧА_2
         //  Создать массив типа String размером 3х6.
         //  И записать в него значения:
@@ -43,7 +45,10 @@ public class ArrayDouble {
             }
             System.out.println();
         }
+      */
 
+
+/*
         //ЗАДАЧА_3_1
         //Двумерный массив типа char.
         //Создать двумерный массив типа char размером 4х2.
@@ -66,6 +71,53 @@ char[][] arrayChar = new char[4][2];
             }
             System.out.println();
         }
-    }
+ */
+/*
+        //ЗАДАЧА_4
+       // Поиск максимального и минимального значения в каждой строке массива.
+      // Создать двумерный массив 5х8 типа int и инициализировать его с помощью блока для инициализации.
+      // Найти максимальное и минимальное значение в каждой "строке" и записать эти значения в двухмерный массив 5х2.
+      // Распечатать массив, содержащий максимальное и минимальное значение.
 
+        int[][] array = new int[5][8];
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = ThreadLocalRandom.current().nextInt(-10, 10);
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+        int[][] minMaxArray = new int[array.length][2];
+
+        for (int i = 0; i < array.length; i++) {
+            int min = array[i][0];
+            int max = array[i][0];
+
+            for (int j = 1; j < array[i].length; j++) {
+                if (array[i][j] < min) {
+                    min = array[i][j];
+                }
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                }
+            }
+
+            // Заполняем новый массив
+            minMaxArray[i][0] = min; // Минимальное значение
+            minMaxArray[i][1] = max; // Максимальное значение
+        }
+
+        // Вывод значений нового массива
+        System.out.println("Новый двумерный массив (мин, макс):");
+        for (int i = 0; i < minMaxArray.length; i++) {
+            System.out.println(minMaxArray[i][0] + "," + minMaxArray[i][1]);
+        }
+*/
+
+    }
 }
+
+
+
+
