@@ -160,6 +160,7 @@ public class ArrayDouble {
         System.out.println("Минимальное значение: " + minValue);
  */
 
+  /*
         // ЗАДАЧА_6
         // Вычислить сумму всех элементов двумерного массива.
 
@@ -184,6 +185,7 @@ public class ArrayDouble {
 
         System.out.print("Максимум: ");
         int maxRange;
+        int[,] ar2= new int[2][2];
 
         //проверяем, границы диапазона
         do {
@@ -207,6 +209,53 @@ public class ArrayDouble {
             System.out.println();
         }
         System.out.println("Общая сумма элментов массива: " + totalSum);
+*/
+
+        //ЗАДАЧА_7
+        // Дан двумерный массив. Определить:
+        // а) максимальное значение среди элементов N столбца массива;
+        // б) минимальное значение среди элементов Y строки массива.
+
+        Scanner scanner = new Scanner(System.in);
+
+        // задаем количество столбцов
+        System.out.print("Количество столбцов: ");
+        int arraySizeByH = scanner.nextInt();
+        // задаем количество строк
+        System.out.print("Количество строк: ");
+        int arraySizeByV = scanner.nextInt();
+        int[][] array7 = new int[arraySizeByH][arraySizeByV];
+        //задаем номер столбца
+        //проверку >< не делаем
+        System.out.print("Каком столбце искать: ");
+        int columnIndex = scanner.nextInt() - 1;
+        //задаем номер строки
+        System.out.print("Какой строке искать: ");
+        int stringIndex = scanner.nextInt() - 1;
+        // заполняем массив
+        for (int i = 0; i < array7.length; i++) {
+            for (int j = 0; j < array7[i].length; j++) {
+                array7[i][j] = ThreadLocalRandom.current().nextInt(-10, 10);
+                System.out.print(" " + array7[i][j] + " ");
+            }
+            System.out.println();
+        }
+        int maxColumn = array7[0][columnIndex];
+        for (int i = 1; i < array7.length; i++) {
+            if (array7[i][columnIndex] > maxColumn) {
+                maxColumn = array7[i][columnIndex];
+            }
+        }
+        System.out.println("Максимальное значение в колонке " + (columnIndex+1) + " : " + maxColumn);
+        int minString = array7[stringIndex][0];
+
+        for (int j = 1; j < array7[stringIndex].length; j++) {
+            if (array7[stringIndex][j] < minString) {
+                minString = array7[stringIndex][j];
+            }
+        }
+        System.out.println("Минимальное значение в строке " + (stringIndex+1) + " : " + minString);
+
 
     }
 }
