@@ -1,7 +1,9 @@
 package ArrayDouble;
 
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ArrayDouble {
@@ -10,6 +12,7 @@ public class ArrayDouble {
 
 /*
         //ЗАДАЧА_1
+        // Таблица умножения
         int[][] MULTIPLICATION_TABLE;
         MULTIPLICATION_TABLE = new int[10][10];
 
@@ -22,14 +25,15 @@ public class ArrayDouble {
             int a = MULTIPLICATION_TABLE[0].length;
         }
 */
+
 /*
         // ЗАДАЧА_2
         //  Создать массив типа String размером 3х6.
         //  И записать в него значения:
         //   a1  a2  a3  a4  a5  a6
-        //  b1  b2  b3  b4  b5  b6
+        //   b1  b2  b3  b4  b5  b6
         //   c1  c2   c3  c4  c5  c6
-        // Распечатать массив.
+        //   Распечатать массив.
 
         String[][] array2 = new String[3][6];
         for (int i = 0; i < array2.length; i++) {
@@ -54,7 +58,7 @@ public class ArrayDouble {
         //Создать двумерный массив типа char размером 4х2.
         //Записать в него значения с помощью блока для инициализации.
         //Распечатать значения массива.
-char[][] arrayChar = new char[4][2];
+         char[][] arrayChar = new char[4][2];
         for (int i = 0; i < arrayChar.length; i++) {
             for (int j = 0; j < arrayChar[i].length; j++) {
                arrayChar[i][j] = 'a';
@@ -72,6 +76,7 @@ char[][] arrayChar = new char[4][2];
             System.out.println();
         }
  */
+
 /*
         //ЗАДАЧА_4
        // Поиск максимального и минимального значения в каждой строке массива.
@@ -114,6 +119,51 @@ char[][] arrayChar = new char[4][2];
             System.out.println(minMaxArray[i][0] + "," + minMaxArray[i][1]);
         }
 */
+
+        // ЗАДАЧА_5
+        // максимальный  элемент двумерного массива
+        // минимальный  элемент двумерного массива
+
+        System.out.println("Введите количество строк в массиве");
+        Scanner scanner = new Scanner(new InputStreamReader(System.in));
+        int arraySizeV = scanner.nextInt();
+        System.out.println("Введите количество элементов в строке");
+        int arraySizeH = scanner.nextInt();
+
+        int[][] array5 = new int[arraySizeV][arraySizeH];
+
+
+        //заполняем массив
+        for (int i = 0; i < array5.length; i++) {
+            for (int j = 0; j < array5[i].length; j++) {
+                array5[i][j] = ThreadLocalRandom.current().nextInt(0, 15);
+                System.out.print(array5[i][j] + " ");
+            }
+            System.out.println();
+        }
+        int maxValue = array5[0][0];
+        int minValue = array5[0][0];
+
+        for (int i = 0; i < array5.length; i++) {
+            for (int j = 0; j < array5[i].length; j++) {
+                if (array5[i][j] > maxValue) {
+                    maxValue = array5[i][j];
+                }
+                if (array5[i][j] < minValue) {
+                    minValue = array5[i][j];
+                }
+            }
+        }
+        System.out.println("\n" + "Максимальное значение: " + maxValue + "\n");
+        System.out.println("Минимальное значение: " + minValue);
+
+
+
+
+
+
+
+
 
     }
 }
