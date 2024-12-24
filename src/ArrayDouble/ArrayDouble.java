@@ -120,6 +120,7 @@ public class ArrayDouble {
         }
 */
 
+/*
         // ЗАДАЧА_5
         // максимальный  элемент двумерного массива
         // минимальный  элемент двумерного массива
@@ -129,9 +130,9 @@ public class ArrayDouble {
         int arraySizeV = scanner.nextInt();
         System.out.println("Введите количество элементов в строке");
         int arraySizeH = scanner.nextInt();
+        scanner.close();
 
         int[][] array5 = new int[arraySizeV][arraySizeH];
-
 
         //заполняем массив
         for (int i = 0; i < array5.length; i++) {
@@ -154,16 +155,58 @@ public class ArrayDouble {
                 }
             }
         }
+
         System.out.println("\n" + "Максимальное значение: " + maxValue + "\n");
         System.out.println("Минимальное значение: " + minValue);
+ */
+
+        // ЗАДАЧА_6
+        // Вычислить сумму всех элементов двумерного массива.
+
+        int totalSum = 0;
+
+        // Задаем размерномть массива
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Нужно задать размер массива.");
+        System.out.print("Задайте количество 'элементов' в каждой строке массива: ");
+        int array6SizeByH = scanner.nextInt();
+        System.out.print("Задайте количество 'строк' в массиве: ");
+        int array6SizeByV = scanner.nextInt();
+        System.out.println("Будет создан массив размерностью: " + array6SizeByH + " x " + array6SizeByV);
 
 
+        int[][] array6 = new int[array6SizeByH][array6SizeByV];
 
+        // Заполняем массив случайными значениями
+        System.out.println("\nЗадайте минимальную и максимальную границу диапазона чисел для заполения массива \n");
+        System.out.print("Минимум: ");
+        int minRange = scanner.nextInt();
 
+        System.out.print("Максимум: ");
+        int maxRange;
 
+        //проверяем, границы диапазона
+        do {
+            maxRange = scanner.nextInt();
+            if (maxRange <= minRange) {
+                System.out.print("Минимум должен быть больше и НЕ равен максимуму.\n Повторите ввод: ");
+            }
+        }
+        while (maxRange <= minRange);
 
+        scanner.close();
 
-
+        System.out.println("Заполненный массив и сумму элементов массива");
+        for (int i = 0; i < array6.length; i++) {
+            for (int j = 0; j < array6[i].length; j++) {
+                array6[i][j] = ThreadLocalRandom.current().nextInt(minRange, maxRange);
+                totalSum = totalSum + array6[i][j];
+                // выводим
+                System.out.print(" " + array6[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("Общая сумма элментов массива: " + totalSum);
 
     }
 }
