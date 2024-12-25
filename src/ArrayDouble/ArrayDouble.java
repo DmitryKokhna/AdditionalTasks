@@ -211,6 +211,7 @@ public class ArrayDouble {
         System.out.println("Общая сумма элментов массива: " + totalSum);
 */
 
+/*
         //ЗАДАЧА_7
         // Дан двумерный массив. Определить:
         // а) максимальное значение среди элементов N столбца массива;
@@ -255,6 +256,34 @@ public class ArrayDouble {
             }
         }
         System.out.println("Минимальное значение в строке " + (stringIndex+1) + " : " + minString);
+*/
+
+        //ЗАДАЧА_8
+        //Дан двумерный массив. Определить:
+        //а) номер столбца, в котором расположен минимальный элемент четвертой строки массива.
+        //Если элементов с минимальным значением в этой строке несколько,
+        // то должен быть найден номер столбца самого левого из них;
+
+        int[][] array7 = {
+                {1, 2, 3, 4},
+                {1, 2, 3, 4},
+                {1, 2, 3, 4},
+                {2, 1, 0, 14}
+        };
+        int rowIndex = 3;
+        int minValue = array7[rowIndex][0];
+        int minIndex = 0;
+
+        for (int j = 1; j < array7[rowIndex].length; j++) {
+            if (array7[rowIndex][j] < minValue) {
+                minValue = array7[rowIndex][j];
+                minIndex = j;
+            }
+        }
+//        Arrays.sort(array7[3]);
+//        indexColumn =  Arrays.binarySearch(array7[3],1);
+//        System.out.println(minValue);
+        System.out.println("Индекс столбца: " + minIndex + ". Таким образом его номер: " + (minIndex + 1));
 
 
     }
