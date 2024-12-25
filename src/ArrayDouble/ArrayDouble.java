@@ -77,12 +77,12 @@ public class ArrayDouble {
         }
  */
 
-/*
+
         //ЗАДАЧА_4
-       // Поиск максимального и минимального значения в каждой строке массива.
-      // Создать двумерный массив 5х8 типа int и инициализировать его с помощью блока для инициализации.
-      // Найти максимальное и минимальное значение в каждой "строке" и записать эти значения в двухмерный массив 5х2.
-      // Распечатать массив, содержащий максимальное и минимальное значение.
+        // Поиск максимального и минимального значения в каждой строке массива.
+        // Создать двумерный массив 5х8 типа int и инициализировать его с помощью блока для инициализации.
+        // Найти максимальное и минимальное значение в каждой "строке" и записать эти значения в двухмерный массив 5х2.
+        // Распечатать массив, содержащий максимальное и минимальное значение.
 
         int[][] array = new int[5][8];
 
@@ -95,6 +95,8 @@ public class ArrayDouble {
         }
         int[][] minMaxArray = new int[array.length][2];
 
+        int coordinateVforMax = 0, coordinateHforMax = 0;
+        
         for (int i = 0; i < array.length; i++) {
             int min = array[i][0];
             int max = array[i][0];
@@ -102,12 +104,17 @@ public class ArrayDouble {
             for (int j = 1; j < array[i].length; j++) {
                 if (array[i][j] < min) {
                     min = array[i][j];
+                    coordinateVforMax = i;
+                    coordinateHforMax = j;
+
                 }
                 if (array[i][j] > max) {
                     max = array[i][j];
                 }
             }
 
+            //Выводит координаты для мин значений в каждой строке
+            System.out.println("Координаты (номер,т.е. индекс + 1) Мин_значения в строке:\nдля строка №" + (i+1) + ": горизонт " + (coordinateVforMax+1) + " / вертикаль " + (coordinateHforMax+1) + ". Хранимое значение: " + min);
             // Заполняем новый массив
             minMaxArray[i][0] = min; // Минимальное значение
             minMaxArray[i][1] = max; // Максимальное значение
@@ -118,7 +125,7 @@ public class ArrayDouble {
         for (int i = 0; i < minMaxArray.length; i++) {
             System.out.println(minMaxArray[i][0] + "," + minMaxArray[i][1]);
         }
-*/
+
 
 /*
         // ЗАДАЧА_5
@@ -258,6 +265,7 @@ public class ArrayDouble {
         System.out.println("Минимальное значение в строке " + (stringIndex+1) + " : " + minString);
 */
 
+    /*    
         //ЗАДАЧА_8
         //Дан двумерный массив. Определить:
         //а) номер столбца, в котором расположен минимальный элемент четвертой строки массива.
@@ -280,11 +288,8 @@ public class ArrayDouble {
                 minIndex = j;
             }
         }
-//        Arrays.sort(array7[3]);
-//        indexColumn =  Arrays.binarySearch(array7[3],1);
-//        System.out.println(minValue);
         System.out.println("Индекс столбца: " + minIndex + ". Таким образом его номер: " + (minIndex + 1));
-
+       */
 
     }
 }
