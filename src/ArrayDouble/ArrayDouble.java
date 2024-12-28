@@ -78,7 +78,7 @@ public class ArrayDouble {
  */
 
 
-        //ЗАДАЧА_4
+   /*     //ЗАДАЧА_4
         // Поиск максимального и минимального значения в каждой строке массива.
         // Создать двумерный массив 5х8 типа int и инициализировать его с помощью блока для инициализации.
         // Найти максимальное и минимальное значение в каждой "строке" и записать эти значения в двухмерный массив 5х2.
@@ -125,7 +125,7 @@ public class ArrayDouble {
         for (int i = 0; i < minMaxArray.length; i++) {
             System.out.println(minMaxArray[i][0] + "," + minMaxArray[i][1]);
         }
-
+*/
 
 /*
         // ЗАДАЧА_5
@@ -291,6 +291,71 @@ public class ArrayDouble {
         System.out.println("Индекс столбца: " + minIndex + ". Таким образом его номер: " + (minIndex + 1));
        */
 
+
+        //ЗАДАЧА_9
+//        В двумерном массиве хранится информация о баллах,
+//        полученных спортсменами-пятиборцами в каждом из пяти видов спорта
+//        (в первой строке — информация о баллах первого спортсмена, во второй — второго и т. д.).
+//        Общее число спортсменов равно 20. Определить:
+//        а) сколько баллов набрал спортсмен-победитель соревнований;
+//        б) сколько баллов набрал спортсмен, занявший последнее место.
+//        Обе задачи решить двумя способами:
+//        1) с использованием дополнительного одномерного массива;
+//        2) без использования дополнительного одномерного массива.
+
+        // ВАРИАНТ - 1 (с использованием дополнительного одномерного массива;)
+        // !!! НЕ ПРОВЕРЯЕМ ДУБЛИКАТЫ
+        int[][] tableWithMarks = new int[20][5];
+
+        System.out.println("--Таблица с баллами--");
+        for (int i = 0; i < tableWithMarks.length; i++) {
+            for (int j = 0; j < tableWithMarks[i].length; j++) {
+                tableWithMarks[i][j] = ThreadLocalRandom.current().nextInt(0, 10);
+                System.out.print("  " + tableWithMarks[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        int max;
+        int min;
+        int sportsmenWinner = 0;
+        int sportsmenLoser = 0;
+        int[] sumOfMarks = new int[20];
+
+        for (int i = 0; i < tableWithMarks.length; i++) {
+            int sum = 0;
+            for (int j = 0; j < tableWithMarks[i].length; j++) {
+                sum = sum + tableWithMarks[i][j];
+                sumOfMarks[i] = sum;
+            }
+        }
+        System.out.println("Сумма баллов каждого спортсмена: ");
+        for (int i = 0; i < sumOfMarks.length; i++) {
+            System.out.print(sumOfMarks[i] + " ");
+        }
+
+        max = sumOfMarks[0];
+        min = sumOfMarks[0];
+        int[] same = new int[20];
+        for (int i = 1; i < sumOfMarks.length; i++) {
+            if (sumOfMarks[i] > max) {
+                max = sumOfMarks[i];
+                sportsmenWinner = i;
+            }
+
+            if (sumOfMarks[i] < min) {
+                min = sumOfMarks[i];
+                sportsmenLoser = i;
+            }
+
+        }
+        System.out.println();
+        System.out.println("Максимальные баллы - " + max);
+        System.out.println("Победитель № - " + (sportsmenWinner + 1));
+        System.out.println("Минимальные баллы - " + min);
+        System.out.println("Мнее всего набравший № - " + (sportsmenLoser + 1));
+
+        System.out.println(Arrays.toString(same));
     }
 }
 
