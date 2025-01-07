@@ -11,6 +11,7 @@ public class ArrayDouble {
     public static void main(String[] args) {
 
 /*
+
         //ЗАДАЧА_1
         // Таблица умножения
         int[][] MULTIPLICATION_TABLE;
