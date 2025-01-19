@@ -1,7 +1,9 @@
 package ArrayTask;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.logging.SocketHandler;
 
 public class ArrayTasks {
     public static void main(String[] args) {
@@ -339,7 +341,7 @@ public class ArrayTasks {
         // (т. е. не подходит вариант, когда в массиве постоянно выпадает сначала 6 положительных,
         // а потом 6 отрицательных чисел или же когда элементы постоянно чередуются через один и пр.).
         //  Вывести полученный массив на экран.
-
+/*
         int[] array12 = new int[12];
         int countPositive = 6;
         int countNegative = 6;
@@ -364,9 +366,20 @@ public class ArrayTasks {
         // тут просто проверяем, что если счетчик ==0, значит все положительные/отрицательные числа заполнены.
         System.out.println("+ " + countPositive);
         System.out.println("- " + countNegative);
+*/
+        int[] array = {1, 2, 3, 4};
+        for (int i = 0; i < array.length / 2; i++) {
+            int tmp = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = tmp;
+
+        }
+        System.out.println(Arrays.toString(array));
+
 
     }
 }
+
 
 
 

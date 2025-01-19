@@ -104,11 +104,11 @@ public class forFOR {
         }
 */
 // ЗАДАЧА 7 - Найти сумму всех целых чисел от 100 до 500.
-        int totalAmount=0;
-        for(int start=100; start <=500;start++){
-           totalAmount=totalAmount+start;
+        int totalAmount = 0;
+        for (int start = 100; start <= 500; start++) {
+            totalAmount = totalAmount + start;
         }
-System.out.println("Итоговое число: " + totalAmount);
+        System.out.println("Итоговое число: " + totalAmount);
 
     }
 }
