@@ -1,8 +1,4 @@
-package JustForRubbish;
-
-import java.util.Arrays;
-import java.util.Locale;
-import java.util.regex.Pattern;
+package justforrubbish;
 
 public class JustForRubbish {
     public static void main(String[] args) {

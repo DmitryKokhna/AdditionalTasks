@@ -1,6 +1,5 @@
-package HashMap;
+package hashmap;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 

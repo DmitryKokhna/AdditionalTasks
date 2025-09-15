@@ -1,9 +1,4 @@
-package ArrayTask;
-
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.logging.SocketHandler;
+package arraytask;
 
 public class ArrayTasks {
     public static void main(String[] args) {

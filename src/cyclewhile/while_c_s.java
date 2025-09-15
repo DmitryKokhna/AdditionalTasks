@@ -1,4 +1,4 @@
-package CycleWhile;
+package cyclewhile;
 
 import java.io.BufferedReader;
 import java.io.IOException;

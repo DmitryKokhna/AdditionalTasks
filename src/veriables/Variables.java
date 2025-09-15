@@ -1,4 +1,4 @@
-package Veriables;
+package veriables;
 
 public class Variables {
 

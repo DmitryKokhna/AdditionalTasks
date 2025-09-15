@@ -1,8 +1,7 @@
-package HashSet;
+package hashset;
 
 
 import java.util.HashSet;
-import java.util.Iterator;
 
 public class HashSetTry {
     public static void main(String[] args) {

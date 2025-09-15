@@ -1,9 +1,6 @@
-package ArrayDouble;
+package arraydouble;
 
-import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ArrayDouble {

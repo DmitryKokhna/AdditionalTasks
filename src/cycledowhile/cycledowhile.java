@@ -1,7 +1,5 @@
-package CycleDoWhile;
+package cycledowhile;
 
-
-import java.util.Scanner;
 
 public class cycledowhile {
     public static void main(String[] arg){

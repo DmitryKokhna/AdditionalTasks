@@ -1,8 +1,6 @@
-package CycleFor;
+package cyclefor;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class forFOR {
     public static void main(String[] arg) throws IOException {

@@ -1,4 +1,4 @@
-package CycleIF;
+package cycleif;
 
 public class ifclass {
    public static void main (String [] arg){
